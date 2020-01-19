@@ -31,15 +31,13 @@ class App extends Component {
     console.log("drop tile in column " + column);
     const tile = this.state.current;
     const col = this.state.board[column].concat(tile); //add a 'red' or 'black' to the end of the col array
-    const newBoard = this.state.board.slice(); //need to copy, can't change directly
+    const newBoard = this.state.board.slice();  //slice() does a shallow copy of an array. Need to copy, can't change directly
     newBoard[column] = col;
     this.setState({
       board: newBoard,
       current: this.togglePlayerTurn(this.state.current),
     });
   }
-
-  //slice() does a shallo copy of an array
 
   render() {
     console.log('App render')
