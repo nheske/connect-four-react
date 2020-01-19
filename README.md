@@ -9,3 +9,5 @@ npx create-react-app connect-four
 
 Run with:
 npm start
+
+![Connect Four React](img/connect-four-react.png)
